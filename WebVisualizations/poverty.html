@@ -62,38 +62,33 @@
         </div>
     </nav>
 
-
     <div class="container">
         <div class="row row-grid">
+
             <div class="col-md-8">
                 <div class="box box-left">
                     <section id="intro">
-                        <h1>Summary</h1>
+                        <h1>Poverty & Ridership</h1>
                         <hr>
+                        <figure>
+                            <a target="_blank" href="poverty_riders_weekend.png">
+                                <img id="viz-main" src="poverty_riders_weekend.png" alt="Poverty & Ridership (Weekend)">
+                            </a>
+                        </figure>
+                        <figure>
+                            <a target="_blank" href="poverty_riders_weekday.png">
+                                <img id="viz-main" src="poverty_riders_weekday.png" alt="Poverty & Ridership (Weekday)">
+                            </a>
+                        </figure>
 
                         <section id="summary">
-                            <p>This project utilizes Census APIs, Texas A&M's reverse geocoding API, and data provided from Valley Metro in Phoenix, Arizona.
+                            <p> Weekend: The r-squared = 0.14855305804651214. The correlation between weekend ridership and poverty is higher than on weekdays. However, the r-squared is too low to prove a clear relationship.
                             </p>
 
-                            <p> I began with a dataset from Valley Metro containing ridership averages and another containing a complete list of bus stops. The first task was to reverse geocode the bus stop locations in order to find their corresponding zipcodes;
-                                the zipcodes would later be necessary to use the Census API.
+                            <br>
 
+                            <p> Weekday: The r-squared = 0.061275235100447446. The weekday ridership relationship to poverty level is very low. It's clear this isn't a strong correlation between the two.
                             </p>
-
-                            <p> After some data wrangling, reverse geocoding the zipcodes, and making some calls to the Census API, I was then able to group my data by zipcodes and determine the population size, per capita income, and poverty levels. With
-                                I then took this data and used Matplotlib and Numpy to create visualizations and analyses to determine correlations between ridership numbers and the demographic trends pulled from the Census data. Lastly, I present my
-                                findings for two seperate categories - weekends and weekdays.
-
-
-                            </p>
-
-                            <ul>
-                                <li>Ridership & Poverty Rate</li>
-                                <li>Ridership & Income Per Capita</li>
-                                <li>Ridership & Population</li>
-
-                            </ul>
-
                         </section>
 
                     </section>
@@ -108,42 +103,42 @@
 
 
                     <div class="row">
-                        <div class="col-xs-6 col-sm-6 col-md-12">
+                        <div class="col-xs-12 col-sm-12 col-md-6">
                             <figure>
                                 <a href="poverty_weekend.html">
                                     <img id="landing-viz" src="poverty_riders_weekend.png" alt="Ridership & Poverty Rate (Weekend)">
                                 </a>
                             </figure>
                         </div>
-                        <div class="col-xs-6 col-sm-6 col-md-12">
+                        <div class="col-xs-12 col-sm-12 col-md-6">
                             <figure>
                                 <a href="poverty_weekday.html">
                                     <img id="landing-viz" src="poverty_riders_weekday.png" alt="Ridership & Poverty Rate (Weekday)">
                                 </a>
                             </figure>
                         </div>
-                        <div class="col-xs-6 col-sm-6 col-md-12">
+                        <div class="col-xs-12 col-sm-12 col-md-6">
                             <figure>
                                 <a href="income_weekend.html">
                                     <img id="landing-viz" src="income_riders_weekend.png" alt="Ridership & Income (Weekend)">
                                 </a>
                             </figure>
                         </div>
-                        <div class="col-xs-6 col-sm-6 col-md-12">
+                        <div class="col-xs-12 col-sm-12 col-md-6">
                             <figure>
                                 <a href="income_weekday.html">
                                     <img id="landing-viz" src="income_riders_weekday.png" alt="Ridership & Income (Weekday)">
                                 </a>
                             </figure>
                         </div>
-                        <div class="col-xs-6 col-sm-6 col-md-12">
+                        <div class="col-xs-12 col-sm-12 col-md-6">
                             <figure>
                                 <a href="population_weekend.html">
                                     <img id="landing-viz" src="population_riders_weekend.png" alt="Ridership & Population (Weekend)">
                                 </a>
                             </figure>
                         </div>
-                        <div class="col-xs-6 col-sm-6 col-md-12">
+                        <div class="col-xs-12 col-sm-12 col-md-6">
                             <figure>
                                 <a href="population_weekday.html">
                                     <img id="landing-viz" src="population_riders_weekday.png" alt="Ridership & Population (Weekday)">

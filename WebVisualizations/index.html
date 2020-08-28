@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Valley Metro Bus Ridership Analysis</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"> Valley Metro Ridership</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="poverty.html">Ridership by Poverty Rate</a>
+                            </li>
+                            <li>
+                                <a href="population.html">Ridership by Population</a>
+                            </li>
+                            <li>
+                                <a href="income.html">Ridership by Per Capita Income</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="comparisons.html">Comparison</a>
+                    </li>
+                    <li>
+                        <a href="table.html">Data</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="container">
+            <div class="col-md-12">
+                <div class="sigline">
+                    <p>
+                        Philip Wewiora | Phoenix, AZ
+                    </p>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <div class="row row-grid">
+            <div class="col-md-8">
+                <div class="box box-left">
+                    <section id="intro">
+                        <h1>Summary</h1>
+                        <hr>
+
+                        <section id="summary">
+                            <p>This project utilizes Census APIs, Texas A&M's reverse geocoding API, and data provided from Valley Metro in Phoenix, Arizona. My assumption before running the analyses was that I would see strong and clear trends indicating
+                                that higher poverty or lower income zipcodes would have higher ridership numbers. I of course understand Phoenix is a very car-centric city, however car ownership is very expensive and I was expecting to find that those
+                                that cannot afford vehicle ownership will be more likely to ride public transit.
+                            </p>
+
+                            <p> I began with a dataset from Valley Metro containing ridership averages and another containing a complete list of bus stops. The first task was to reverse geocode the bus stop locations in order to find their corresponding zipcodes;
+                                the zipcodes would later be necessary to use the Census API.
+
+                            </p>
+
+                            <p> After some data wrangling, reverse geocoding the zipcodes, and making some calls to the Census API, I was then able to group my data by zipcodes and determine the population size, per capita income, and poverty levels. With
+                                I then took this data and used Matplotlib and Numpy to create visualizations and analyses to determine correlations between ridership numbers and the demographic trends pulled from the Census data. Lastly, I present my
+                                findings for two seperate categories - weekends and weekdays.
+
+
+                            </p>
+
+                            <ul>
+                                <li>Ridership & Poverty Rate</li>
+                                <li>Ridership & Income Per Capita</li>
+                                <li>Ridership & Population</li>
+
+                            </ul>
+
+                        </section>
+
+                    </section>
+                </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="box box-right">
+                    <h2>Visualizations</h2>
+                    <hr>
+
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-6">
+                            <figure>
+                                <a href="poverty_weekend.html">
+                                    <img id="landing-viz" src="poverty_riders_weekend.png" alt="Ridership & Poverty Rate (Weekend)">
+                                </a>
+                            </figure>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6">
+                            <figure>
+                                <a href="poverty_weekday.html">
+                                    <img id="landing-viz" src="poverty_riders_weekday.png" alt="Ridership & Poverty Rate (Weekday)">
+                                </a>
+                            </figure>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6">
+                            <figure>
+                                <a href="income_weekend.html">
+                                    <img id="landing-viz" src="income_riders_weekend.png" alt="Ridership & Income (Weekend)">
+                                </a>
+                            </figure>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6">
+                            <figure>
+                                <a href="income_weekday.html">
+                                    <img id="landing-viz" src="income_riders_weekday.png" alt="Ridership & Income (Weekday)">
+                                </a>
+                            </figure>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6">
+                            <figure>
+                                <a href="population_weekend.html">
+                                    <img id="landing-viz" src="population_riders_weekend.png" alt="Ridership & Population (Weekend)">
+                                </a>
+                            </figure>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6">
+                            <figure>
+                                <a href="population_weekday.html">
+                                    <img id="landing-viz" src="population_riders_weekday.png" alt="Ridership & Population (Weekday)">
+                                </a>
+                            </figure>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>

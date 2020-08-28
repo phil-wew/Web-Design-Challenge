@@ -72,13 +72,6 @@ h3 {
     line-height: 1.8em;
 }
 
-#city-sample {
-    float: left;
-    width: 200px;
-    height: 200px;
-    margin: 10px 20px;
-}
-
 #landing-viz {
     padding: 15px 15px 15px 15px;
     width: 100%;
@@ -95,6 +88,14 @@ h3 {
     width: 100%;
     height: 100%;
     padding: 25px
+}
+
+.jumbotronTransp {
+    width: 100%;
+    height: 100%;
+    padding: 25px;
+    color: inherit;
+    background-color: transparent;
 }
 
 .table {
